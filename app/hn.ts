@@ -14,6 +14,11 @@ const loader = new DataLoader(
 );
 
 export default async function fetchHn(path: string) {
+  // Note: the use of dataloader here is superfluous because the downstream API
+  // doesn't support batching and the use of suspense at the component level
+  // gives us the other benefit -- loading synchronisation. It's really just
+  // here to illustration how you *might* use it.
+  
   const res = await loader.load(path);
 
   if (res.status !== 200) {
