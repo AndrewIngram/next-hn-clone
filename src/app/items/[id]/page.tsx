@@ -1,9 +1,15 @@
 import StoryHeader from "~/components/StoryHeader";
 import StoryCommentList from "~/components/StoryCommentList";
 
+export const config = {
+  dynamic: "force-dynamic",
+};
+
 type Props = {
   params: { id: number };
 };
+
+// export const runtime = "experimental-edge";
 
 export default function StoryDetailPage({ params: { id } }: Props) {
   return (

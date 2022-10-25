@@ -14,13 +14,23 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
       "~/*": ["./*"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "typings/**/*.ts", "**/*.ts", "**/*.tsx"],
-
+  "include": [
+    "next-env.d.ts",
+    "typings/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"],
   "ts-node": {
     "transpileOnly": true,

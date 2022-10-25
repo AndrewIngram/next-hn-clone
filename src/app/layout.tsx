@@ -4,7 +4,11 @@ import Link from "next/link";
 
 import "~/styles/global.css";
 
-export default function RootLayout({ children }) {
+interface Props {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className="antialiased bg-white">
       <head>
@@ -14,12 +18,22 @@ export default function RootLayout({ children }) {
         <header className="bg-neutral-800 text-white text-md sticky top-0 shadow-sm ">
           <nav className="py-4 px-6 max-w-4xl w-full flex gap-6 mx-auto">
             <h1 className="font-extrabold">
-              <Link href="/">The Orange Site</Link>
+              <Link href="/" prefetch={false}>
+                The Orange Site
+              </Link>
             </h1>
-            <Link href="/new">new</Link>
-            <Link href="/ask">ask</Link>
-            <Link href="/show">show</Link>
-            <Link href="/jobs">jobs</Link>
+            <Link href="/new" prefetch={false}>
+              new
+            </Link>
+            <Link href="/ask" prefetch={false}>
+              ask
+            </Link>
+            <Link href="/show" prefetch={false}>
+              show
+            </Link>
+            <Link href="/jobs" prefetch={false}>
+              jobs
+            </Link>
           </nav>
           <span className="block bg-gradient-to-r from-orange-400 to-pink-600 h-1 w-full"></span>
         </header>

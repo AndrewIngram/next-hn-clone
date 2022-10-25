@@ -1,4 +1,5 @@
 import { useHn } from "~/app/hn";
+
 import { extractHost, timeAgo } from "~/app/utils";
 
 import Link from "next/link";
@@ -22,6 +23,7 @@ export default function StoryItem({ id }: Props) {
         <h2 className="font-medium text-sm">
           <Link
             href={story.url ? story.url : `/items/${id}`}
+            prefetch={false}
             className="hover:underline"
           >
             {story.title}
@@ -33,11 +35,19 @@ export default function StoryItem({ id }: Props) {
       </hgroup>
       <div className="text-xs">
         {story.score} {enPlural(story.score, "point", "points")} by {story.by}{" "}
-        <Link href={`/items/${id}`} className="hover:underline">
+        <Link
+          href={`/items/${id}`}
+          prefetch={false}
+          className="hover:underline"
+        >
           <span>{timeAgo(story.time)} ago</span>
         </Link>{" "}
         | {story.descendants}{" "}
-        <Link href={`/items/${id}`} className="hover:underline">
+        <Link
+          href={`/items/${id}`}
+          prefetch={false}
+          className="hover:underline"
+        >
           {enPlural(story.descendants, "comment", "comments")}
         </Link>
       </div>

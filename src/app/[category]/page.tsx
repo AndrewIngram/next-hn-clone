@@ -2,9 +2,15 @@ import { useHn } from "~/app/hn";
 
 import StoryList from "~/components/StoryList";
 
+export const config = {
+  dynamic: "force-dynamic",
+};
+
 type Props = {
   params: { category: string };
 };
+
+// export const runtime = "experimental-edge";
 
 export default function CategoryStoriesPage({ params: { category } }: Props) {
   if (!["new", "best", "top", "ask", "show", "jobs"].includes(category)) {
