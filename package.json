@@ -16,8 +16,8 @@
     "ms": "^2.1.3",
     "next": "13.0.0",
     "pure-uuid": "^1.6.2",
-    "react": "18.3.0-next-fecc288b7-20221025",
-    "react-dom": "18.3.0-next-fecc288b7-20221025",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "sanitize-html": "^2.7.2"
   },
   "devDependencies": {

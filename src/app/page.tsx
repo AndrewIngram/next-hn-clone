@@ -6,8 +6,6 @@ export const config = {
   dynamic: "force-dynamic",
 };
 
-export const runtime = "experimental-edge";
-
 export default function TopStoriesPage() {
   const storyIds: Array<number> = useHn("topstories");
 

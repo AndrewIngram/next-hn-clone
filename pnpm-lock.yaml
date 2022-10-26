@@ -16,8 +16,8 @@ specifiers:
   next: 13.0.0
   postcss: ^8.4.16
   pure-uuid: ^1.6.2
-  react: 18.3.0-next-fecc288b7-20221025
-  react-dom: 18.3.0-next-fecc288b7-20221025
+  react: 18.2.0
+  react-dom: 18.2.0
   sanitize-html: ^2.7.2
   tailwindcss: ^3.1.8
   ts-node: ^10.9.1
@@ -31,10 +31,10 @@ dependencies:
   date-fns: 2.29.3
   lodash: 4.17.21
   ms: 2.1.3
-  next: 13.0.0_d6rcamawdo45avnz6jxiy6p4si
+  next: 13.0.0_biqbaboplfbrettd7655fr4n2y
   pure-uuid: 1.6.2
-  react: 18.3.0-next-fecc288b7-20221025
-  react-dom: 18.3.0-next-fecc288b7-20221025_cb5ruxkz3bqlxwvs2j6rdcpmja
+  react: 18.2.0
+  react-dom: 18.2.0_react@18.2.0
   sanitize-html: 2.7.2
 
 devDependencies:
@@ -1694,7 +1694,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next/13.0.0_d6rcamawdo45avnz6jxiy6p4si:
+  /next/13.0.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-puH1WGM6rGeFOoFdXXYfUxN9Sgi4LMytCV5HkQJvVUOhHfC1DoVqOfvzaEteyp6P04IW+gbtK2Q9pInVSrltPA==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -1716,10 +1716,10 @@ packages:
       '@swc/helpers': 0.4.11
       caniuse-lite: 1.0.30001406
       postcss: 8.4.14
-      react: 18.3.0-next-fecc288b7-20221025
-      react-dom: 18.3.0-next-fecc288b7-20221025_cb5ruxkz3bqlxwvs2j6rdcpmja
-      styled-jsx: 5.1.0_cb5ruxkz3bqlxwvs2j6rdcpmja
-      use-sync-external-store: 1.2.0_cb5ruxkz3bqlxwvs2j6rdcpmja
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      styled-jsx: 5.1.0_react@18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.0.0
       '@next/swc-android-arm64': 13.0.0
@@ -2007,22 +2007,22 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /react-dom/18.3.0-next-fecc288b7-20221025_cb5ruxkz3bqlxwvs2j6rdcpmja:
-    resolution: {integrity: sha512-EczZNIcOXzLFyPhSXpplVFekfUvbtHRC68TVAPfCopn8YxjMg2ROVgYs1VdSnEu2JlXKvpeIbjexAuhDprsp/A==}
+  /react-dom/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
-      react: 18.3.0-next-fecc288b7-20221025
+      react: ^18.2.0
     dependencies:
       loose-envify: 1.4.0
-      react: 18.3.0-next-fecc288b7-20221025
-      scheduler: 0.24.0-next-fecc288b7-20221025
+      react: 18.2.0
+      scheduler: 0.23.0
     dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
-  /react/18.3.0-next-fecc288b7-20221025:
-    resolution: {integrity: sha512-lKvCNWRO9XPy8q7hLd0ODK/4Oqr54r3Vr49Y7EyNBz/kfsmNT6Vx0F69KRz/eGcbt1XDvtbA7KZd+mh8w3wONQ==}
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -2119,8 +2119,8 @@ packages:
       postcss: 8.4.16
     dev: false
 
-  /scheduler/0.24.0-next-fecc288b7-20221025:
-    resolution: {integrity: sha512-D2r7z/2EbRXXz4k8XRQab2l71zARIwmZzLLGPAM936/dW1iF835+FMwnOe4Iep96vNJAdQavqJBP4Fm+/MadsQ==}
+  /scheduler/0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
     dev: false
@@ -2213,7 +2213,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-jsx/5.1.0_cb5ruxkz3bqlxwvs2j6rdcpmja:
+  /styled-jsx/5.1.0_react@18.2.0:
     resolution: {integrity: sha512-/iHaRJt9U7T+5tp6TRelLnqBqiaIT0HsO0+vgyj8hK2KUk7aejFqRrumqPUlAqDwAj8IbS/1hk3IhBAAK/FCUQ==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -2227,7 +2227,7 @@ packages:
         optional: true
     dependencies:
       client-only: 0.0.1
-      react: 18.3.0-next-fecc288b7-20221025
+      react: 18.2.0
     dev: false
 
   /supports-color/7.2.0:
@@ -2396,12 +2396,12 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /use-sync-external-store/1.2.0_cb5ruxkz3bqlxwvs2j6rdcpmja:
+  /use-sync-external-store/1.2.0_react@18.2.0:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 18.3.0-next-fecc288b7-20221025
+      react: 18.2.0
     dev: false
 
   /util-deprecate/1.0.2:
