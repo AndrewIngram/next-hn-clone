@@ -1,4 +1,5 @@
 import * as React from "react";
+import { AnalyticsWrapper } from "~/components/Analytics";
 
 import Link from "next/link";
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: Props) {
         <section className="bg-neutral-100 px-9 py-6">
           <div className="max-w-4xl mx-auto w-full">{children}</div>
         </section>
+        <AnalyticsWrapper />
       </body>
     </html>
   );

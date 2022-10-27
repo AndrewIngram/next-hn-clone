@@ -8,6 +8,7 @@
     "format": "prettier --write 'src/**/*.{js,css,ts,tsx}'"
   },
   "dependencies": {
+    "@vercel/analytics": "^0.1.2",
     "class-variance-authority": "^0.2.4",
     "clsx": "^1.2.1",
     "dataloader": "^2.1.0",
