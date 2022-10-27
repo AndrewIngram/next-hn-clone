@@ -1,4 +1,4 @@
-import { useHn } from "~/app/hn";
+import { fetchHn } from "~/app/hn";
 
 import { notFound } from "next/dist/client/components/not-found";
 
@@ -13,10 +13,10 @@ type Props = {
   params: { id: number };
 };
 
-// export const runtime = "experimental-edge";
+export const runtime = "experimental-edge";
 
-export default function StoryDetailPage({ params: { id } }: Props) {
-  if (!useHn(`item/${id}`)) {
+export default async function StoryDetailPage({ params: { id } }: Props) {
+  if (!(await fetchHn(`item/${id}`))) {
     return notFound();
   }
 

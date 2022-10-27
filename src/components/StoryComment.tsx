@@ -1,4 +1,4 @@
-import { useHn } from "~/app/hn";
+import { fetchHn } from "~/app/hn";
 
 import sanitizeHtml from "sanitize-html";
 import { type Comment, type Deleted } from "./types";
@@ -8,11 +8,11 @@ type Props = {
   id: number;
 };
 
-export default function StoryComment({ id }: Props) {
-  const comment: Comment | Deleted = useHn(`item/${id}`);
+export default async function StoryComment({ id }: Props) {
+  const comment: Comment | Deleted = await fetchHn(`item/${id}`);
 
   if (comment.type !== "comment") {
-    // error
+    return null;
   }
 
   if (typeof comment.deleted !== "undefined" && comment.deleted) {

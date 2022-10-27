@@ -1,4 +1,4 @@
-import { useHn } from "~/app/hn";
+import { fetchHn } from "~/app/hn";
 
 import { extractHost, timeAgo } from "~/app/utils";
 
@@ -14,8 +14,8 @@ function enPlural(count: number, singular: string, plural: string) {
   return count === 1 ? singular : plural;
 }
 
-export default function StoryItem({ id }: Props) {
-  const story: Story = useHn(`item/${id}`);
+export default async function StoryItem({ id }: Props) {
+  const story: Story = await fetchHn(`item/${id}`);
 
   return (
     <article className="flex flex-col gap-0">

@@ -1,5 +1,4 @@
 import { use } from "react";
-
 import DataLoader from "dataloader";
 
 const loader = new DataLoader(
@@ -13,15 +12,8 @@ const loader = new DataLoader(
   { cache: false }
 );
 
-export default async function fetchHn(path: string) {
-  const res = await fetch(
-    `https://hacker-news.firebaseio.com/v0/${path}.json`,
-    {
-      cache: "no-store",
-    }
-  );
-
-  // const res = await loader.load(path);
+export async function fetchHn(path: string) {
+  const res = await fetch(`https://hacker-news.firebaseio.com/v0/${path}.json`);
 
   if (res.status !== 200) {
     throw new Error(`Status ${res.status}`);

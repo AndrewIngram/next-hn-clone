@@ -1,4 +1,4 @@
-import { useHn } from "~/app/hn";
+import { fetchHn } from "~/app/hn";
 
 import { type Story } from "./types";
 
@@ -9,8 +9,8 @@ type Props = {
   id: number;
 };
 
-export default function StoryCommentList({ id }: Props) {
-  const story: Story = useHn(`item/${id}`);
+export default async function StoryCommentList({ id }: Props) {
+  const story: Story = await fetchHn(`item/${id}`);
 
   return story.kids && story.kids.length > 0 ? (
     <ol className="flex flex-col gap-4">
