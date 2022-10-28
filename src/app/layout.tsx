@@ -20,7 +20,7 @@ export default function RootLayout({ children }: Props) {
           <nav className="py-4 px-6 max-w-4xl w-full flex gap-6 mx-auto">
             <h1 className="font-extrabold">
               <Link href="/" prefetch={false}>
-                The Orange Site
+                The <span className="text-orange-300">Orange</span> Site
               </Link>
             </h1>
             <Link href="/new" prefetch={false}>
